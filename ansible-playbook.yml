@@ -29,4 +29,4 @@
         group: docker
         state: file
     - name: Run the image in detached mode
-      shell: docker run -itd -p 8080:8080 ajay206/finance_app:latest
+      shell: docker run -itd -p 8081:8081 ajay206/finance_app:latest
