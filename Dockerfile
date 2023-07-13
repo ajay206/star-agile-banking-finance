@@ -1,4 +1,4 @@
-FROM openjdk:11
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM tomcat:latest
+WORKDIR /home/devopsadmin
+COPY ./workspace/Finance_app/target/banking-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps
+RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
