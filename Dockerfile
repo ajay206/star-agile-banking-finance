@@ -1,4 +1,4 @@
 FROM tomcat:latest
 WORKDIR /home/devopsadmin
-COPY ./workspace/Finance_app/target/banking-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps
+COPY ./target/banking-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps
 RUN cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
